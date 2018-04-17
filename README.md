@@ -11,7 +11,7 @@ run per session:
 
 run per chain:
 
-```sh conpile&run.sh```
+```sh conpile&upload.sh```
 
 ## Use
 
