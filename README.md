@@ -11,7 +11,7 @@ run per session:
 
 run per chain:
 
-```sh compile&run.sh```
+```sh compile&upload.sh```
 
 ## Use
 
