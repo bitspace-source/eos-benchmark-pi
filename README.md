@@ -7,7 +7,7 @@ a compute benchmark of pi on eos-node
 
 ## Initialize
 
-#### run per session
+### run per session
 
 ```cleos wallet open``` 
 
