@@ -1,10 +1,5 @@
-if[$1 != ""];then
-    user=$1
-else
-    user="bitspace"
-fi
-
 cd eos-benchmark
-eosiocpp -o eos-benchmark.wast -g eos-benchmark.abi eos-benchmark.cpp
+eosiocpp -o eos-benchmark.wast eos-benchmark.cpp
+eosiocpp -g eos-benchmark.abi eos-benchmark.cpp
 
-cleos set contract $user ../eos-benchmark -p $user
+cleos set contract $1 ../eos-benchmark -p $1

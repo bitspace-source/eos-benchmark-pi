@@ -124,8 +124,7 @@
  (func $_ZN5hello2piEyyy (type $FUNCSIG$vijjj) (param $0 i32) (param $1 i64) (param $2 i64) (param $3 i64)
   (local $4 i64)
   (local $5 i64)
-  (local $6 i64)
-  (set_local $6
+  (set_local $5
    (i64.const 1)
   )
   (block $label$0
@@ -141,13 +140,13 @@
      (i64.const -1)
     )
    )
-   (set_local $6
+   (set_local $5
     (i64.const 1)
    )
    (loop $label$1
-    (set_local $6
+    (set_local $5
      (i64.mul
-      (get_local $6)
+      (get_local $5)
       (i64.const 10)
      )
     )
@@ -178,61 +177,56 @@
       (i64.const 2)
      )
     )
-    (set_local $3
-     (i64.const 3)
-    )
-    (set_local $1
+    (set_local $2
      (i64.const 1)
     )
-    (set_local $2
-     (get_local $6)
+    (set_local $3
+     (i64.const 5)
+    )
+    (set_local $1
+     (get_local $5)
     )
     (loop $label$4
-     (set_local $2
+     (set_local $1
       (i64.add
-       (select
-        (tee_local $5
-         (i64.div_u
-          (get_local $6)
-          (get_local $3)
-         )
-        )
-        (i64.sub
-         (i64.const 0)
+       (i64.sub
+        (get_local $1)
+        (i64.div_u
          (get_local $5)
-        )
-        (i64.eqz
-         (i64.and
-          (get_local $1)
-          (i64.const 1)
+         (i64.add
+          (get_local $3)
+          (i64.const -2)
          )
         )
        )
-       (get_local $2)
+       (i64.div_u
+        (get_local $5)
+        (get_local $3)
+       )
       )
      )
      (set_local $3
       (i64.add
        (get_local $3)
-       (i64.const 2)
+       (i64.const 4)
       )
      )
      (br_if $label$4
-      (i64.ne
-       (get_local $4)
-       (tee_local $1
+      (i64.lt_u
+       (tee_local $2
         (i64.add
-         (get_local $1)
-         (i64.const 1)
+         (get_local $2)
+         (i64.const 2)
         )
        )
+       (get_local $4)
       )
      )
      (br $label$2)
     )
    )
-   (set_local $2
-    (get_local $6)
+   (set_local $1
+    (get_local $5)
    )
   )
   (call $prints
@@ -240,7 +234,7 @@
   )
   (call $printui
    (i64.shl
-    (get_local $2)
+    (get_local $1)
     (i64.const 2)
    )
   )

@@ -14,11 +14,9 @@ class hello : public eosio::contract {
         }
         uint64_t pi = offset;
         
-        for(uint64_t i = 1; i < iterations*difficulty; i++ {
-            if(i % 2 == 0)
-                pi += offset/(1+(i*2));
-            else 
-                pi -= offset/(1+(i*2));
+        for(uint64_t i = 1; i < iterations*difficulty; i+=2) {
+            pi -= offset/(1+(i*2));
+            pi += offset/(3+(i*2));
         }
         pi *= 4;
         
