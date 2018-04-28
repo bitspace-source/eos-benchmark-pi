@@ -1,9 +1,9 @@
 # eos-benchmark-pi
-a compute benchmark of pi on eos-node
+this repo contains a primitive compute benchmark for the eos blockhain that repeatedly calculates pi
 
 ## requirements
 
-```cleos``` and ```eosiocpp``` compiled with eos and a node running localy
+```cleos``` and ```eosiocpp``` and a node running localy
 
 ## Initialize
 
