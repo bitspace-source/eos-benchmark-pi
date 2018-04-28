@@ -3,18 +3,20 @@ a compute benchmark of pi on eos-node
 
 ## Initialize
 
-run per session:
+#### run per session
 
 ```cleos wallet open``` 
 
 ```cleos wallet unlock```
 
-run per chain:
+make sure to have keys for the user you use!
 
-```sh compile&upload.sh```
+### run per chain
+
+```sh compile&upload.sh [<user>]```
 
 ## Use
 
-run 
+### run 
 
 ```python3 benchmark.py [<iterations> [<difficulty> [<precition> ["<account>"]]]]```
