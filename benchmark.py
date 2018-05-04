@@ -6,12 +6,10 @@ import sys
 user       =     sys.argv[1]  if len(sys.argv) > 1 else "bitspace"
 iterations = int(sys.argv[2]) if len(sys.argv) > 2 else 1000
 difficulty = int(sys.argv[3]) if len(sys.argv) > 3 else 100
-precision  = int(sys.argv[4]) if len(sys.argv) > 4 else 15
-
 
 start = time.time()
 for i in range(iterations):
-	os.system("cleos push action %s pi '[%i, %i, %i]' -p %s" % (user, i, difficulty, precision, user))
+	os.system("cleos push action %s pi '[%i, %i]' -p %s" % (user, i, difficulty, user))
 #
 end = time.time()
 print("iterations: %i, time %d" % (iterations, end-start))

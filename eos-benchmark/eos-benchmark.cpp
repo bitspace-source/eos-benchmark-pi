@@ -7,11 +7,8 @@ class hello : public eosio::contract {
     using contract::contract;
 
     /// @abi action 
-    void pi( uint64_t iterations, uint64_t difficulty, uint64_t precision ) {
-        uint64_t offset = 1; 
-        for(uint64_t i = 1; i<precision; i++) {
-            offset *= 10;
-        }
+    void pi( uint64_t iterations, uint64_t difficulty ) {
+        uint64_t offset = 1000000000000000000; 
         uint64_t pi = offset;
         
         for(uint64_t i = 1; i < iterations*difficulty; i+=2) {
