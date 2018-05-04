@@ -1,9 +1,9 @@
 # eos-benchmark-pi
-this repo contains a primitive compute benchmark for the eos blockhain that repeatedly calculates pi
+This repo contains a primitive compute benchmark for the eos blockhain that repeatedly calculates pi.
 
 ## Requirements
 
-```cleos``` and ```eosiocpp``` and a node running localy
+```cleos```, ```eosiocpp``` and a user on the chain.
 
 ## Initialize
 
@@ -13,7 +13,7 @@ this repo contains a primitive compute benchmark for the eos blockhain that repe
 
 ```cleos wallet unlock```
 
-make sure to have keys for the user you use!
+Make sure to have keys for the user you use in your wallet!
 
 ### run per chain
 
